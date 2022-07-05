@@ -1,4 +1,3 @@
-// import React, { Component } from 'react';
 import Feedback  from "./Feedback"
 function FeedbackList({feedback}) {
     if(!feedback && feedback.length === 0){

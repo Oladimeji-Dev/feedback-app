@@ -1,4 +1,3 @@
-// import React, { Component } from 'react';
 import Card from "./shared/Card"
 
 function Feedback({data}) {
