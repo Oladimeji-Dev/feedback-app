@@ -1,5 +1,5 @@
 import Feedback  from "./Feedback"
-function FeedbackList({feedback, handleFeedback}) {
+function FeedbackList({feedback, handleFeedback,handleAddFeedback }) {
     if(feedback.length === 0){
         return <h2 className="container">no list yet</h2>
     }
@@ -8,7 +8,7 @@ function FeedbackList({feedback, handleFeedback}) {
     <div>
         {
             feedback.map((item)=>(
-                <Feedback key={item.id} data={item} deleteFeedback ={handleFeedback}/>
+                <Feedback key={item.id} data={item} deleteFeedback ={handleFeedback} />
             ))
         }
     </div>

@@ -2,7 +2,7 @@ import { useState } from "react"
 import Card from "./shared/Card"
 import Button from "./shared/Button"
 import RatingSelect from "./RatingSelect"
-function FeedbackForm({handleFeedback}) {
+function FeedbackForm({handleAddFeedback}) {
     const [text, setText] = useState('')
     const [message, setMessage] = useState("")
     const [btnisDisabled, setIsDisable] = useState(true)
@@ -23,18 +23,21 @@ function FeedbackForm({handleFeedback}) {
         }
         setText(e.target.value)
     }
-    function handleOnSubmit(){
-        if(text.trim().length > 10){
+    function handleOnSubmit(e){
+        e.preventDefault()
+
+        if(text.trim().length >= 10){
             const feedData = {
             text,
             rating
             }
-            handleFeedback(feedData)
+
+            handleAddFeedback(feedData)
+            setText('')
         }else{
             setIsDisable(true)
             setMessage("the character is less than 10")
         }
-        
         
     }
   return (
