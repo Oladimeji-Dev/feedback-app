@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start` but in other to use the json server together you have to run `npm run dev` to run both
-together because installed a package called concurently to do the 2 commands together
+together because i installed a package called concurently to do the 2 commands together
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
