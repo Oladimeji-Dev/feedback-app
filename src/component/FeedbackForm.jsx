@@ -45,6 +45,7 @@ function FeedbackForm() {
 
             if(feedbackEdit.edit === true){
                 updateFeedback(feedbackEdit.item.id, feedData)
+                
             }else{
                 AddFeedback(feedData)
             }
